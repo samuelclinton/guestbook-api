@@ -15,6 +15,11 @@ public class MessageDTO implements Serializable {
     public MessageDTO() {
     }
 
+    public MessageDTO(String message, String signature) {
+        this.message = message;
+        this.signature = signature;
+    }
+
     public MessageDTO(Long id, String message, String signature) {
         this.id = id;
         this.message = message;
