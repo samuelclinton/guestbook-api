@@ -27,6 +27,12 @@ public class MessageService {
         return list.stream().map(x -> new MessageDTO(x)).collect(Collectors.toList());
     }
 
+    // Get a random message method
+    public MessageDTO getRandomMessage() {
+        Message message = repo.getRandomMessage();
+        return new MessageDTO(message);
+    }
+
     // Save a new message method
     public void save(MessageDTO message) {
         Message newMessage = new Message(message);

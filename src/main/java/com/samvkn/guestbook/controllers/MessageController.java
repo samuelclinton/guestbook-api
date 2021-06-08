@@ -31,6 +31,12 @@ public class MessageController {
         return ResponseEntity.ok(list);
     }
 
+    @GetMapping("/messages/random")
+    public ResponseEntity<MessageDTO> getRandomMessage() {
+        MessageDTO randomMessage = service.getRandomMessage();
+        return ResponseEntity.ok(randomMessage);
+    }
+
     // Add new message route under "/messages/new" using JSON body
     @PostMapping("/messages/new")
     @ResponseBody
