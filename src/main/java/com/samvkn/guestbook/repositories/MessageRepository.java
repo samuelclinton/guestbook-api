@@ -12,6 +12,6 @@ public interface MessageRepository extends JpaRepository<Message, Long> {
 
     Message findMessageById(Long id);
 
-    @Query(value = "SELECT * FROM messages ORDER BY RAND() LIMIT 1;", nativeQuery = true)
+    @Query(value = "SELECT * FROM messages ORDER BY RANDOM() LIMIT 1;", nativeQuery = true)
     Message getRandomMessage();
 }
