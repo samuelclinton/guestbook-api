@@ -21,6 +21,12 @@ public class MessageService {
         return list.stream().map(x -> new MessageDTO(x)).collect(Collectors.toList());
     }
 
+    // Find a message by id
+    public MessageDTO findMessageById(Long id) {
+        Message message = repo.findMessageById(id);
+        return new MessageDTO(message);
+    }
+
     // Find all messages by specific signature
     public List<MessageDTO> findAllBySignature(String signature) {
         List<Message> list = repo.findBySignature(signature);

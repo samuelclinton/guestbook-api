@@ -8,10 +8,10 @@ import java.util.List;
 
 public interface MessageRepository extends JpaRepository<Message, Long> {
 
-    public List<Message> findBySignature(String signature);
+    List<Message> findBySignature(String signature);
 
-    //@Query("SELECT new com.samvkn.guestbook.dtos.MessageDTO(obj.message, obj.signature) FROM Message AS obj " +
-    //       "ORDER BY RAND() LIMIT 1;")
+    Message findMessageById(Long id);
+
     @Query(value = "SELECT * FROM messages ORDER BY RAND() LIMIT 1;", nativeQuery = true)
-    public Message getRandomMessage();
+    Message getRandomMessage();
 }

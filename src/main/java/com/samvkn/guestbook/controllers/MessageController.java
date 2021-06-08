@@ -16,14 +16,22 @@ public class MessageController {
     @Autowired
     private MessageService service;
 
-    // Find all messages on route "/"
+    // Get all messages on route "/"
     @GetMapping
     public ResponseEntity<List<MessageDTO>> findAll() {
         List<MessageDTO> list = service.findAll();
         return ResponseEntity.ok(list);
     }
 
-    // Find all by signature route using request params
+    // Get message by id route
+    @GetMapping("/messages/{id}")
+    @ResponseBody
+    public ResponseEntity<MessageDTO> findMessageById(@PathVariable(value = "id") String id) {
+        MessageDTO message = service.findMessageById(Long.parseLong(id));
+        return ResponseEntity.ok(message);
+    }
+
+    // Get all by signature route using request params
     @GetMapping("/messages/by-signature")
     @ResponseBody
     public ResponseEntity<List<MessageDTO>> findAllBySignature(@RequestParam String signature) {
@@ -31,6 +39,7 @@ public class MessageController {
         return ResponseEntity.ok(list);
     }
 
+    // Get random message route
     @GetMapping("/messages/random")
     public ResponseEntity<MessageDTO> getRandomMessage() {
         MessageDTO randomMessage = service.getRandomMessage();
