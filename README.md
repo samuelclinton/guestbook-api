@@ -1,14 +1,10 @@
-<center>
-	<img src="https://raw.githubusercontent.com/samvkn/guestbook-api/main/images/logo.png?token=ANLIBTRHKPH3YMQCZH3IIG3AX6K7C">
-</center>
+# ![Guestbook API logo](/images/logo.png "Guestbook API")
 
----
-
-![United Kingdom's flag](https://raw.githubusercontent.com/samvkn/guestbook-api/main/images/uk.png?token=ANLIBTUV26OU44PWHM5IO3DAX6KNE)
+### ![United Kingdom's flag](/images/uk.png "English")
 **Guestbook API** is a college project on Java & Cloud services. It consists on a REST-like API built with [Spring Framework](https://spring.io/) and hosted on [Heroku](https://heroku.com) that the user can see messages left from guests, delete a message and also leave his/her own messages. The API in itself is very simple, but the concepts applied to building it were a thrill to learn.
 
 
-![Brazil's flag](https://raw.githubusercontent.com/samvkn/guestbook-api/main/images/brazil.png?token=ANLIBTQ25TXJ7FIQSYEWW33AX6KEG)
+### ![Brazil's flag](/images/brazil.png "Portuguese")
 **Guestbook API** é um projeto de faculdade sobre Java e serviços de cloud. Ele consiste em uma API REST-like construída com [Spring Framework](https://spring.io/) e hospedado no [Heroku](https://heroku.com) onde o usuário pode ver mensagens deixadas por visitantes, deletar uma mensagem e também deixar suas próprias mensagens. A API por si só é bastante simples mas os conceitos aplicados na sua construção foram muito divertidos de se aprender.
 
 
@@ -39,10 +35,10 @@ Existem alguns software para debugar APIs disponíveis, o mais famoso deles é o
 
 **GET** `samvkn-guestbook.herokuapp.com/messages/delete/{id}` Deleta a mensagem pela id passada no route param.
 
----
+# 
 
 ### :page_with_curl: Créditos
 
-Ícone do logo por **Kiranshastry** via [Flaticon](https://www.flaticon.com/authors/kiranshastry)
-Fonte do logo **Comfortaa** via [Google Fonts](https://fonts.google.com)
-Ícones das bandeiras do Brasil e Reino Unido via [Iconfinder](https://iconfinder.com)
+* Ícone do logo por **Kiranshastry** via [Flaticon](https://www.flaticon.com/authors/kiranshastry)
+* Fonte do logo **Comfortaa** via [Google Fonts](https://fonts.google.com)
+* Ícones das bandeiras do Brasil e Reino Unido via [Iconfinder](https://iconfinder.com)
